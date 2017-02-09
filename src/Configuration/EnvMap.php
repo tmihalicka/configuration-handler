@@ -56,10 +56,10 @@ class EnvMap
     /**
      * Get Env Value from Value
      *
-     * @return EnvMap
+     * @return string|null
      */
     public function getEnvValue()
     {
-        return new self($this->key, getenv($this->value));
+        return getenv($this->value);
     }
 }
