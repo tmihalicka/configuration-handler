@@ -59,7 +59,7 @@ class ProcessorFactory
             case ProcessorInterface::PROCESSOR_TYPE_ARRAY:
                 return new ArrayProcessor($this->composerIo, $parsedConfiguration);
             case ProcessorInterface::PROCESSOR_TYPE_NULL:
-                return new NullProcessor();
+                return new NullProcessor($this->composerIo, $parsedConfiguration);
             default:
                 throw new InvalidProcessorTypeException(
                     "Given Processor type {$parsedConfiguration->getProcessor()} is not supported."
