@@ -2,12 +2,8 @@
 
 namespace TMihalicka\ConfigurationHandler\Configuration;
 
-use JMS\Serializer\Annotation as Serializer;
-
 /**
  * Class EnvMap
- *
- * @Serializer\ExclusionPolicy("all")
  */
 class EnvMap
 {
@@ -15,9 +11,6 @@ class EnvMap
      * Env Map Key
      *
      * @var string
-     *
-     * @Serializer\Type("string")
-     * @Serializer\Expose()
      */
     private $key;
 
@@ -25,9 +18,6 @@ class EnvMap
      * Env Map Value
      *
      * @var string
-     *
-     * @Serializer\Type("string")
-     * @Serializer\Expose()
      */
     private $value;
 
@@ -64,7 +54,7 @@ class EnvMap
     }
 
     /**
-     * Get Env Value from Key
+     * Get Env Value from Value
      *
      * @return EnvMap
      */
